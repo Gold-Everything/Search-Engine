@@ -1,5 +1,4 @@
-# Search-Engine
-## RPI Content Search Engine
+# RPI Content Search-Engine
 ### Large Scale Programming & Testing 2019
 
 #### Architecture
