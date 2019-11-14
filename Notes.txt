@@ -29,5 +29,3 @@ CONFIG FILE:
 .env specifies all the environment variables for the python instance
 
 https://pypi.org/project/python-dotenv/#installation
-
-gibboa@rpi.edu
