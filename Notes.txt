@@ -1,0 +1,33 @@
+Relevant 3rd party documentation:
+
+TESTING / DEV OPS:
+
+Pytest: https://docs.pytest.org/en/latest/getting-started.html#run-multiple-tests
+
+DEPENDENCY MANAGEMENT:
+
+(sort of like node modules and npm install if you're familiar with that)
+Pipenv: 
+https://realpython.com/pipenv-guide/ 
+https://docs.python-guide.org/dev/virtualenvs/ 
+https://pipenv-fork.readthedocs.io/en/latest/
+https://pipenv.readthedocs.io/en/latest/advanced/#deploying-system-dependencies
+https://github.com/pypa/pipenv/issues/3383
+
+Either do pipenv install --system to locally install all the dependencies from the pipfile.lock or do pipenv run [usual python command here] to run the python command inside the virtual environment. pipenv install only installs to the virtual environment by default.
+
+CONTINOUS INTEGRATION (CI):
+
+https://docs.travis-ci.com/user/for-beginners/
+
+ERROR REPORTING:
+
+https://docs.sentry.io/
+
+CONFIG FILE:
+
+.env specifies all the environment variables for the python instance
+
+https://pypi.org/project/python-dotenv/#installation
+
+gibboa@rpi.edu
