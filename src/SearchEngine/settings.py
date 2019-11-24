@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 from dotenv import load_dotenv
-load_dotenv()
+# Manage.py will run in /src which is where the .env file will be
+envPath = os.path.abspath('./.env')
+load_dotenv(envPath)
 
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
@@ -30,13 +32,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
+print(os.getenv("DJANGO_SECRET_KEY"))
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = f'%x{os.getenv("DJANGO_SECRET_KEY")}'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv('DJANGO_DEBUG'))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition

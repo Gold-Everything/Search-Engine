@@ -22,5 +22,5 @@ urlpatterns = [
     # Note: if you're used to ASP, "/" is not a valid route. NEEDS to be empty string to refer to root
     #       of current app
     path('', views.index),
-    path('trigErr', views.error)
+    path('throwError', views.error)
 ]
